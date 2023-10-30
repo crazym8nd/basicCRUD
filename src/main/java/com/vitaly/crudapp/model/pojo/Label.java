@@ -34,9 +34,7 @@ public class Label  {
         this.id = id;
     }
     public Label(){
-        Scanner in = new Scanner(System.in);
-        System.out.print("Enter name:");
-        this.name = in.nextLine();
+        this.name = name;
         this.status = Status.ACTIVE;
         this.id = uid;
         uid++;

@@ -1,2 +1,12 @@
 
-]	java:S125"<This block of commented-out lines of code should be removed.(¹©ºãûÿÿÿÿ8×†Œå¶1
+]	java:S125"<This block of commented-out lines of code should be removed.(ºô üÿÿÿÿ8°’¼·1
+]	java:S125"<This block of commented-out lines of code should be removed.(¹©ºãûÿÿÿÿ8°’¼·1
+]	java:S125"<This block of commented-out lines of code should be removed.(´…ÿÏıÿÿÿÿ8°’¼·1
+]
+java:S1128"@Remove this unused import 'com.vitaly.crudapp.model.pojo.Label'.(©ñ¢8°’¼·1
+O
+java:S1128"3Remove this unused import 'java.io.BufferedWriter'.(¬õº/8°’¼·1
+Q
+java:S1128"/Remove this unused import 'java.io.FileWriter'.(Ã‘ÅÃıÿÿÿÿ8°’¼·1
+R
+java:S1128	"0Remove this unused import 'java.io.IOException'.(ªº»Úıÿÿÿÿ8°’¼·1

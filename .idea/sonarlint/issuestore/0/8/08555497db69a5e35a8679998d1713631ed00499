@@ -1,6 +1,8 @@
 
-n	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(³Ì™«ıÿÿÿÿ8ı­ôä¶1
-F	java:S106"+Replace this use of System.out by a logger.(õÍª8®ôä¶1
-L	java:S106"+Replace this use of System.out by a logger.(ØœŞûÿÿÿÿ8„®ôä¶1
-Z
-java:S1128"8Remove this unused import 'com.google.gson.GsonBuilder'.(”«à¬ÿÿÿÿÿ8âõä¶1
+g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8¢êŸ¼·1
+n	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(³Ì™«ıÿÿÿÿ8¢êŸ¼·1
+L
+java:S1481"/Remove this unused "labelslist" local variable.(İı·•8ü³ ¼·1
+G	java:S106"+Replace this use of System.out by a logger.(ùàèü8§êŸ¼·1
+z
+java:S1128"XRemove this unused import 'com.vitaly.crudapp.repository.impls.GsonLabelRepositoryImpl'.(ö¬ßŸúÿÿÿÿ8ş³ ¼·1
