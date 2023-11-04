@@ -14,8 +14,16 @@ public class Label  {
     private static final String FILE_PATH = "src/main/resources/labels.json";
 
     private int id;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String name;
-    private static int uid = 0;
 
     public Status getStatus() {
         return status;
@@ -27,7 +35,7 @@ public class Label  {
 
     private Status status;
 
-    public long getId() {
+    public Integer getId() {
         return id;
     }
     public void setId(int id) {
@@ -36,10 +44,22 @@ public class Label  {
     public Label(){
         this.name = name;
         this.status = Status.ACTIVE;
-        this.id = uid;
-        uid++;
+        this.id = id;
     }
+    public Label(String name){
+        this.name = name;
+        this.status = Status.ACTIVE;
+        this.id = id;
+
+    }
+    public Label(String name, int id){
+        this.name = name;
+        this.status = Status.ACTIVE;
+        this.id = id;
+
+    }
+
 public String toString(){
-        return "Label [name=" +name+",id=" + id+"]";
+        return "Label name=" +name+",id=" + id;
 }
 }
