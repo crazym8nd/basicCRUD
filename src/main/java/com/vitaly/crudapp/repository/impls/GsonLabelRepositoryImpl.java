@@ -18,8 +18,7 @@ public class GsonLabelRepositoryImpl implements LabelRepository {
 
     private List<Label> labelsdataset() {
         try (BufferedReader labelsdreader = new BufferedReader(new FileReader(Label.getlabelPATH()))) {
-            List<Label> labelsdataset = new Gson().fromJson(labelsdreader, new TypeToken<List<Label>>() {
-            }.getType());
+            List<Label> labelsdataset = new Gson().fromJson(labelsdreader, new TypeToken<List<Label>>(){}.getType());
             return labelsdataset;
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -29,7 +28,7 @@ public class GsonLabelRepositoryImpl implements LabelRepository {
 
     @Override
     public Label getById(Integer id) {
-        return labelsdataset().stream().filter(l -> l.getId().equals(id)).findFirst().orElseThrow(() -> new FileSystemNotFoundException("Label not found"));
+        return getAll().stream().filter(l -> l.getId().equals(id)).findFirst().orElseThrow(() -> new FileSystemNotFoundException("Label not found"));
     }
 
     @Override
@@ -40,35 +39,29 @@ public class GsonLabelRepositoryImpl implements LabelRepository {
 
     @Override
     public Label save(Label label) {
-        List<Label> sourcelabels = labelsdataset();
+        List<Label> sourcelabels = getAll();
         sourcelabels.add(label);
-        try (BufferedWriter labelwriter = new BufferedWriter(new FileWriter(Label.getlabelPATH(), true))) {
-            gson.toJson(sourcelabels, labelwriter);
-            return label;
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
+        savechanges(sourcelabels);
+        return label;
     }
 
 
     @Override
-    public Label update(Label label) {
-        Label updatedlabel = new Label();
+    public Label update(Integer id) {
+        Label updatedlabel = getById(id);
         updatedlabel.setName(new Scanner(System.in).nextLine());
+        save(updatedlabel);
     return updatedlabel;
     }
 
     @Override
     public void deleteById(Integer id) {
-        Label label = labelsdataset().stream().filter(l -> l.getId().equals(id)).findFirst().orElseThrow(() -> new FileSystemNotFoundException("Label not found"));
+        Label label = getById(id);
         label.setStatus(Status.DELETED);
-        savechanges(label);
     }
 
-    private void savechanges(Label label) {
-        List<Label> labelsbefore = labelsdataset();
-        labelsbefore.add(label);
+    private void savechanges(List<Label> labels) {
+        List<Label> labelsbefore = labels;
         try (BufferedWriter labelwriter = new BufferedWriter(new FileWriter(Label.getlabelPATH(), false))){
             gson.toJson(labelsbefore, labelwriter);
         } catch (IOException e) {

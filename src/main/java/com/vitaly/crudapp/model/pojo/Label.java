@@ -1,11 +1,5 @@
 package com.vitaly.crudapp.model.pojo;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-import java.io.Serializable;
-import java.util.Scanner;
-
 public class Label  {
     public static String getlabelPATH() {
         return FILE_PATH;

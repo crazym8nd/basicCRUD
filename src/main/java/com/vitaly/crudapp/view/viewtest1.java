@@ -10,10 +10,10 @@ public class viewtest1 {
 
     public static void main(String[] args) {
         GsonLabelRepositoryImpl impl = new GsonLabelRepositoryImpl();
-        List<Label> labels = impl.getAll();
         Label labelnext = new Label("next", 8);
-        System.out.println(labels);
-        System.out.println("OK");
+        impl.update(1);
+
+        System.out.println(impl);
 
 
     }

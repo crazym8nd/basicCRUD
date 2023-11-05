@@ -1,8 +1,9 @@
 
-n	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(†ƒÛğüÿÿÿÿ8º–ü×¸1
+n	java:S101	"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(†ƒÛğüÿÿÿÿ8ÛÎÔû¹1
 Z
-java:S1854"=Remove this useless assignment to local variable "labelnext".(Î ±›8úÃ…Ø¸1
+java:S1854"=Remove this useless assignment to local variable "labelnext".(Î ±›8ÕˆÏü¹1
 K
-java:S1481".Remove this unused "labelnext" local variable.(Î ±›8ûÃ…Ø¸1
-G	java:S106"+Replace this use of System.out by a logger.(Ï·Ü®8½–ü×¸1
-G	java:S106"+Replace this use of System.out by a logger.(ùàèü8½–ü×¸1
+java:S1481".Remove this unused "labelnext" local variable.(Î ±›8ÖˆÏü¹1
+G	java:S106"+Replace this use of System.out by a logger.(‹Ì¬…8àÎÔû¹1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ª²‹ı¹1
