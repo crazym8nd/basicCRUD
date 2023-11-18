@@ -8,7 +8,7 @@ public class MainView {
 
     private final Scanner scanner = new Scanner(System.in);
     private final LabelView labelView = new LabelView();
-//    private final PostView postView = new PostView();
+    private final PostView postView = new PostView();
 //    private final WriterView writerView = new WriterView();
 //
 //
@@ -29,9 +29,9 @@ public class MainView {
                 case "1":
                     labelView.show();
                     break;
-//                case "2":
-//                    postViewSHOW
-//                    break;
+                case "2":
+                    postView.show();
+                    break;
 //                case "3":
 //                    writerViewSHOW
 //                    break;

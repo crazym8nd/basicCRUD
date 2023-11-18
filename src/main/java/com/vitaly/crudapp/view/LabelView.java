@@ -29,33 +29,49 @@ public class LabelView {
     public void createLabel() {
         System.out.println("Enter name");
         String name = scanner.nextLine();
-
-        Label createdLabel = labelController.createLabel(name);
-        System.out.println("Label created:" + createdLabel);
+        try{Label createdLabel = labelController.createLabel(name);
+            System.out.println("Label created:" + createdLabel);
+        } catch (Exception e){
+            System.out.println("Error");
+        }
     }
 
     public void editLabel(){
         System.out.println(editLabelMsg);
-        Integer id = scanner.nextInt();
-        Label labelToUpdate = labelController.getById(id);
-
-        System.out.println("Enter new name:");
-        String name = scanner.nextLine();
-        labelToUpdate.setName(name);
-        labelController.update(labelToUpdate);
-        System.out.println("Changes saved");
+        try{
+            Integer id = Integer.parseInt(scanner.nextLine());
+            Label labelToUpdate = labelController.getById(id);
+            System.out.println("Enter new name:");
+            String name = scanner.nextLine();
+            labelToUpdate.setName(name);
+            labelController.update(labelToUpdate);
+            System.out.println("Changes saved");
+        }catch (Exception e){
+            System.out.println("Error");
+        }
     }
+
     public void deleteLabel(){
         System.out.println(deleteLabelMsg);
         Integer id = scanner.nextInt();
-        labelController.delete(id);
-        System.out.println("Label delted");
+        try{
+            labelController.delete(id);
+            System.out.println("Label delted");
+        } catch (Exception e){
+            System.out.println("Error");
+        }
     }
 
     public void readLabels(){
-        List<Label> labels = labelController.getAll();
+        List<Label> labels = null;
+        try{
+            labels = labelController.getAll();
+        } catch (Exception e){
+            System.out.println("Error");
+        }
+
         System.out.println(printLabelList);
-        Collections.sort(labels, Comparator.comparing(Label::getId));
+        labels.sort(Comparator.comparing(Label::getId));
         for (Label l : labels){
             System.out.println(l.getId() +" "+ l.getName());
         }

@@ -1,0 +1,8 @@
+Writer (id, firstName, lastName, List posts)  пользователь у которого есть посты
+Post (id, title, content, List labels) - лист лейблов типа хештеги поста
+ Label(id, name) самый простой класс
+ Status (enum ACTIVE, DELETED)  у всех
+
+ сначала делаем Label controller и view v
+ потом пост
+ и последним писателя

@@ -11,8 +11,6 @@ p
 Nsrc/main/java/com/vitaly/crudapp/repository/impls/GsonLabelRepositoryImpl.java,c\9\c941fce6e66bf3525b78a4007b1c4b7727a9df9c
 f
 6src/main/java/com/vitaly/crudapp/model/pojo/Label.java,a\1\a1d8fc49c3206d0fac9689c4fc9d5c3f60b9db98
-d
-4src/main/java/com/vitaly/crudapp/view/viewtest1.java,0\8\08555497db69a5e35a8679998d1713631ed00499
 w
 G.idea/sonarlint/issuestore/8/e/8eff3bc6246428f7e1ba332d4ab387ed5c17d6bf,c\5\c5fe4822b7fc4e3edeab6d8f65ac7fb5272f60ed
 w
@@ -56,3 +54,11 @@ o
 ?src/main/java/com/vitaly/crudapp/controller/PostController.java,8\4\84ab72ecd6ec8112d227e3e083fc5383ed7c37b6
 q
 Asrc/main/java/com/vitaly/crudapp/controller/WriterController.java,7\7\770be5e1644922c767f3652ba2c3f94373d9fe1e
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+9
+	notes.txt,8\3\83348d283c1ba0b3b4d55fdc04c39a165b933125
+o
+?src/main/java/com/vitaly/crudapp/repository/PostRepository.java,a\5\a59d84214e394f070e5efe58f79ff150aab3c0b4
+}
+Msrc/main/java/com/vitaly/crudapp/repository/impls/GsonPostRepositoryImpl.java,7\b\7b0e9fcb2a81e7bb2df663b951cbab9c6c5d0d59

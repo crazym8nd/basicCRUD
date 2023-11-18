@@ -4,6 +4,10 @@ import java.util.List;
 
 public class Post {
     private Integer id;
+    private String title;
+    private String content;
+    private Status status;
+    private List<Label> postLabels;
 
     public Integer getId() {
         return id;
@@ -21,8 +25,6 @@ public class Post {
         this.title = title;
     }
 
-    private String title;
-
     public String getContent() {
         return content;
     }
@@ -30,10 +32,6 @@ public class Post {
     public void setContent(String content) {
         this.content = content;
     }
-
-    private String content;
-    private List<Label> postLabels;
-
     public Status getStatus() {
         return status;
     }
@@ -41,7 +39,16 @@ public class Post {
     public void setStatus(Status status) {
         this.status = status;
     }
+    public List<Label> getPostLabels() {
+        return postLabels;
+    }
 
-    private Status status;
+    public void setPostLabels(List<Label> postLabels) {
+        this.postLabels = postLabels;
+    }
+    public String toString() {
+        return "Post title=" + title + ",id=" + id;
+    }
 
 }
+
