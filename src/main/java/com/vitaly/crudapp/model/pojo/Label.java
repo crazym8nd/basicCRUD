@@ -1,13 +1,9 @@
 package com.vitaly.crudapp.model.pojo;
 
-public class Label  {
-    public static String getlabelPATH() {
-        return FILE_PATH;
-    }
-
-    private static final String FILE_PATH = "src/main/resources/labels.json";
-
+public class Label {
     private int id;
+    private String name;
+    private Status status;
 
     public String getName() {
         return name;
@@ -17,7 +13,6 @@ public class Label  {
         this.name = name;
     }
 
-    private String name;
 
     public Status getStatus() {
         return status;
@@ -27,33 +22,17 @@ public class Label  {
         this.status = status;
     }
 
-    private Status status;
 
     public Integer getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
-    public Label(){
-        this.name = name;
-        this.status = Status.ACTIVE;
-        this.id = id;
-    }
-    public Label(String name){
-        this.name = name;
-        this.status = Status.ACTIVE;
-        this.id = id;
 
-    }
-    public Label(String name, int id){
-        this.name = name;
-        this.status = Status.ACTIVE;
-        this.id = id;
 
+    public String toString() {
+        return "Label name=" + name + ",id=" + id;
     }
-
-public String toString(){
-        return "Label name=" +name+",id=" + id;
-}
 }

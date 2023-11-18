@@ -8,66 +8,87 @@ import com.vitaly.crudapp.repository.LabelRepository;
 
 import java.io.*;
 import java.nio.file.FileSystemNotFoundException;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 
 public class GsonLabelRepositoryImpl implements LabelRepository {
-    private static Gson gson = new Gson();
+    private static final Gson GSON = new Gson();
+    private static final String FILE_PATH = "src/main/resources/labels.json";
 
 
-    private List<Label> labelsdataset() {
-        try (BufferedReader labelsdreader = new BufferedReader(new FileReader(Label.getlabelPATH()))) {
-            List<Label> labelsdataset = new Gson().fromJson(labelsdreader, new TypeToken<List<Label>>(){}.getType());
-            return labelsdataset;
+    private List<Label> labelsDataSet() {
+        try (BufferedReader labelsDReader = new BufferedReader(new FileReader(FILE_PATH))) {
+            return new Gson().fromJson(labelsDReader, new TypeToken<List<Label>>() {
+            }.getType());
+        } catch (IOException e) {
+            System.out.println("....");
+            return Collections.emptyList();
+        }
+    }
+
+    private void saveChanges(List<Label> labels) {
+        try (BufferedWriter labelWriter = new BufferedWriter(new FileWriter(FILE_PATH, false))) {
+            GSON.toJson(labels, labelWriter);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    private Integer generateId(List<Label> labels) {
+        return labels.stream()
+                .mapToInt(Label::getId).max().orElse(0) + 1;
     }
 
 
     @Override
     public Label getById(Integer id) {
-        return getAll().stream().filter(l -> l.getId().equals(id)).findFirst().orElseThrow(() -> new FileSystemNotFoundException("Label not found"));
+        return labelsDataSet().stream().filter(l -> l.getId().equals(id)).findFirst().orElseThrow(() -> new FileSystemNotFoundException("Label not found"));
     }
 
     @Override
     public List<Label> getAll() {
-        return labelsdataset();
+        return labelsDataSet().stream().filter(l -> l.getStatus().equals(Status.ACTIVE)).collect(Collectors.toList());
     }
 
 
     @Override
-    public Label save(Label label) {
-        List<Label> sourcelabels = getAll();
-        sourcelabels.add(label);
-        savechanges(sourcelabels);
-        return label;
+    public Label save(Label labelToCreate) {
+        List<Label> sourceLabels = labelsDataSet();
+        labelToCreate.setId(generateId(sourceLabels));
+        sourceLabels.add(labelToCreate);
+        saveChanges(sourceLabels);
+        return labelToCreate;
     }
 
 
     @Override
-    public Label update(Integer id) {
-        Label updatedlabel = getById(id);
-        updatedlabel.setName(new Scanner(System.in).nextLine());
-        save(updatedlabel);
-    return updatedlabel;
+    public Label update(Label labelToUpdate) {
+        List<Label> labels = labelsDataSet()
+                .stream().map(existingLabel -> {
+                    if (existingLabel.getId().equals(labelToUpdate.getId())) {
+                        return labelToUpdate;
+                    }
+                    return existingLabel;
+                }).collect(Collectors.toList());
+        saveChanges(labels);
+        return labelToUpdate;
     }
 
     @Override
     public void deleteById(Integer id) {
-        Label label = getById(id);
-        label.setStatus(Status.DELETED);
+        List<Label> labels = labelsDataSet()
+                .stream().peek(existingLabel -> {
+                    if (existingLabel.getId().equals(id)) {
+                        existingLabel.setStatus(Status.DELETED);
+                    }
+                }).collect(Collectors.toList());
+        saveChanges(labels);
     }
 
-    private void savechanges(List<Label> labels) {
-        List<Label> labelsbefore = labels;
-        try (BufferedWriter labelwriter = new BufferedWriter(new FileWriter(Label.getlabelPATH(), false))){
-            gson.toJson(labelsbefore, labelwriter);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-}
+
 }
 
 
