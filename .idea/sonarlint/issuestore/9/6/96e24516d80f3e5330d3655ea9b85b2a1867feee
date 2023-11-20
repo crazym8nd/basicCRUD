@@ -1,0 +1,30 @@
+
+h
+java:S1192!"FDefine a constant instead of duplicating this literal "Error" 4 times.(êÓæøùÿÿÿÿ8ÜÎòè¾1
+>
+java:S1170"!Make this final field static too.(¯¾»Ÿ8æÎòè¾1
+>
+java:S1170"!Make this final field static too.(–ôÁ„8æÎòè¾1
+C
+java:S1170"!Make this final field static too.(‹ğ·İüÿÿÿÿ8æÎòè¾1
+>
+java:S1170"!Make this final field static too.(¬‹¡¤8æÎòè¾1
+C
+java:S1170"!Make this final field static too.(·ßÜûÿÿÿÿ8æÎòè¾1
+L	java:S106"+Replace this use of System.out by a logger.(µ©Ëüÿÿÿÿ8èÎòè¾1
+F	java:S106"+Replace this use of System.out by a logger.(µšR8èÎòè¾1
+L	java:S106!"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8èÎòè¾1
+L	java:S106&"+Replace this use of System.out by a logger.(µ¼°¨ÿÿÿÿÿ8èÎòè¾1
+L	java:S106*"+Replace this use of System.out by a logger.(…«Æäøÿÿÿÿ8éÎòè¾1
+L	java:S106."+Replace this use of System.out by a logger.( ““‘ıÿÿÿÿ8éÎòè¾1
+L	java:S1060"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8éÎòè¾1
+G	java:S1065"+Replace this use of System.out by a logger.(ı©§ğ8éÎòè¾1
+L	java:S1069"+Replace this use of System.out by a logger.(Ğ¥ö¤ıÿÿÿÿ8éÎòè¾1
+L	java:S106;"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8éÎòè¾1
+L	java:S106D"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8éÎòè¾1
+L	java:S106G"+Replace this use of System.out by a logger.(£Š£™ùÿÿÿÿ8êÎòè¾1
+G	java:S106J"+Replace this use of System.out by a logger.(Õ‘‡º8êÎòè¾1
+G	java:S106Q"+Replace this use of System.out by a logger.(¶”Ïú8êÎòè¾1
+L	java:S106d"+Replace this use of System.out by a logger.(´ñÄùÿÿÿÿÿ8êÎòè¾1
+U
+java:S1068"3Remove this unused "createWriterMsg" private field.(‹ğ·İüÿÿÿÿ8êÎòè¾1

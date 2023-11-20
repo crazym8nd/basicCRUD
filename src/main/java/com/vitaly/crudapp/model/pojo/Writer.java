@@ -4,6 +4,11 @@ import java.util.List;
 
 public class Writer {
     private Integer id;
+    private String firstName;
+    private String lastName;
+    private List<Post> writerPosts;
+    private Status status;
+
 
     public String getFirstName() {
         return firstName;
@@ -29,10 +34,7 @@ public class Writer {
         this.status = status;
     }
 
-    private String firstName;
-    private String lastName;
-    private List<Post> writerPosts;
-    private Status status;
+
 
     public Integer getId() {
         return id;

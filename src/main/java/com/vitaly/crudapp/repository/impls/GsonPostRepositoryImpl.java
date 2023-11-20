@@ -65,11 +65,11 @@ public class GsonPostRepositoryImpl implements PostRepository {
     @Override
     public Post update(Post postToUpdate) {
         List<Post> posts = postsDataSet()
-                .stream().map(existingLabel -> {
-                    if (existingLabel.getId().equals(postToUpdate.getId())) {
+                .stream().map(existingPost -> {
+                    if (existingPost.getId().equals(postToUpdate.getId())) {
                         return postToUpdate;
                     }
-                    return existingLabel;
+                    return existingPost;
                 }).collect(Collectors.toList());
         saveChangesPosts(posts);
         return postToUpdate;
@@ -78,9 +78,9 @@ public class GsonPostRepositoryImpl implements PostRepository {
     @Override
     public void deleteById(Integer id) {
         List<Post> posts = postsDataSet()
-                .stream().peek(existingLabel -> {
-                    if (existingLabel.getId().equals(id)) {
-                        existingLabel.setStatus(Status.DELETED);
+                .stream().peek(existingPost -> {
+                    if (existingPost.getId().equals(id)) {
+                        existingPost.setStatus(Status.DELETED);
                     }
                 }).collect(Collectors.toList());
         saveChangesPosts(posts);

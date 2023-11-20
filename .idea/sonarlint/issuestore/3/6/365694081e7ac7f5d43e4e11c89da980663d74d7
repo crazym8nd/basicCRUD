@@ -1,0 +1,5 @@
+
+g	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òιόÿÿÿÿ8Ζ«θΎ1
+G	java:S106"+Replace this use of System.out by a logger.(†πω­8Ξ«θΎ1
+C
+java:S3864R"!Remove this use of "Stream.peek".(ΐ®Ϊ»ώÿÿÿÿ8Α¦µθΎ1

@@ -9,9 +9,9 @@ public class MainView {
     private final Scanner scanner = new Scanner(System.in);
     private final LabelView labelView = new LabelView();
     private final PostView postView = new PostView();
-//    private final WriterView writerView = new WriterView();
-//
-//
+    private final WriterView writerView = new WriterView();
+
+
 
     private final String menu = "Выберете действие:\n" +
             "1. Лейблы\n" +
@@ -32,9 +32,9 @@ public class MainView {
                 case "2":
                     postView.show();
                     break;
-//                case "3":
-//                    writerViewSHOW
-//                    break;
+                case "3":
+                    writerView.show();
+                    break;
                 case "4":
                     isExit = true;
                     break;

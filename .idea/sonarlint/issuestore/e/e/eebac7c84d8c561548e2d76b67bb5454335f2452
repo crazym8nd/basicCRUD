@@ -1,0 +1,32 @@
+
+h
+java:S1192 "FDefine a constant instead of duplicating this literal "Error" 4 times.(êÓæøùÿÿÿÿ8 ªÙ—¾1
+_
+java:S2259G"CA "NullPointerException" could be thrown; "posts" is nullable here.(¦âÿ8ÖÀü—¾1
+>
+java:S1170"!Make this final field static too.(÷£ª8°ªÙ—¾1
+C
+java:S1170"!Make this final field static too.(ÉŠıÿÿÿÿ8°ªÙ—¾1
+>
+java:S1170"!Make this final field static too.(ÇĞÌË8°ªÙ—¾1
+C
+java:S1170"!Make this final field static too.(îæğàûÿÿÿÿ8°ªÙ—¾1
+>
+java:S1170"!Make this final field static too.(¶Ä¿—8°ªÙ—¾1
+G	java:S106"+Replace this use of System.out by a logger.(¹¨Šá8³ªÙ—¾1
+G	java:S106"+Replace this use of System.out by a logger.(şÒ½8³ªÙ—¾1
+L	java:S106 "+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8³ªÙ—¾1
+L	java:S106%"+Replace this use of System.out by a logger.(™ãÒşÿÿÿÿ8´ªÙ—¾1
+G	java:S106)"+Replace this use of System.out by a logger.(•´«Ğ8´ªÙ—¾1
+L	java:S106-"+Replace this use of System.out by a logger.( ““‘ıÿÿÿÿ8´ªÙ—¾1
+L	java:S106/"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8´ªÙ—¾1
+G	java:S1064"+Replace this use of System.out by a logger.(ŒÄå¤8´ªÙ—¾1
+G	java:S1068"+Replace this use of System.out by a logger.(Ÿ‘•8µªÙ—¾1
+L	java:S106:"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8µªÙ—¾1
+L	java:S106C"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8µªÙ—¾1
+L	java:S106F"+Replace this use of System.out by a logger.(‘Ê¶Íûÿÿÿÿ8µªÙ—¾1
+L	java:S106I"+Replace this use of System.out by a logger.(­“Õûÿÿÿÿ8µªÙ—¾1
+L	java:S106P"+Replace this use of System.out by a logger.(ï¸®ûÿÿÿÿ8¶ªÙ—¾1
+L	java:S106c"+Replace this use of System.out by a logger.(´ñÄùÿÿÿÿÿ8¶ªÙ—¾1
+N
+java:S1068"1Remove this unused "createPostMsg" private field.(ÇĞÌË8ÁóŞ—¾1
