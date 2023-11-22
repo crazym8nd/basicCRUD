@@ -1,19 +1,26 @@
 package com.vitaly.crudapp.controller;
 
+import com.vitaly.crudapp.model.pojo.Label;
 import com.vitaly.crudapp.model.pojo.Post;
 import com.vitaly.crudapp.model.pojo.Status;
 import com.vitaly.crudapp.repository.PostRepository;
+import com.vitaly.crudapp.repository.impls.GsonLabelRepositoryImpl;
 import com.vitaly.crudapp.repository.impls.GsonPostRepositoryImpl;
+import com.vitaly.crudapp.view.LabelView;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class PostController {
     private final PostRepository postRepository = new GsonPostRepositoryImpl();
-    public Post createPost(String title) {
+    private final Scanner scanner = new Scanner(System.in);
+    public Post createPost(String title, String content) {
         Post postToCreate = new Post();
         postToCreate.setTitle(title);
+        postToCreate.setContent(content);
         postToCreate.setStatus(Status.ACTIVE);
-        postToCreate.setContent("");
+        postToCreate.setLabelsIds(selectLabels());
         return postRepository.save(postToCreate);
     }
     public List<Post> getAll(){
@@ -28,6 +35,26 @@ public class PostController {
     }
     public void delete(Integer id){
         postRepository.deleteById(id);
+    }
+
+    public List<Integer> selectLabels(){
+
+        List<Integer> labelsIds = new ArrayList<>();
+        LabelView lv = new LabelView();
+        lv.readLabels();
+        boolean addLabels = true;
+            while (addLabels) {
+                System.out.println("Enter labels ID to add:");
+                Integer labelId = Integer.parseInt(scanner.nextLine());
+                labelsIds.add(labelId);
+
+                System.out.println("dobavit ewe kategoriy? (y/n)");
+                String answer = scanner.nextLine();
+                if (!answer.equalsIgnoreCase("y")) {
+                    addLabels = false;
+                }
+            }
+        return labelsIds;
     }
 
 

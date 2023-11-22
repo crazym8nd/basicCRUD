@@ -5,8 +5,6 @@ import com.vitaly.crudapp.model.pojo.Label;
 import java.util.Scanner;
 
 public class MainView {
-
-    private final Scanner scanner = new Scanner(System.in);
     private final LabelView labelView = new LabelView();
     private final PostView postView = new PostView();
     private final WriterView writerView = new WriterView();
@@ -21,30 +19,29 @@ public class MainView {
 
 
     public void start() {
+        Scanner scanner = new Scanner(System.in);
         boolean isExit = false;
         do {
             System.out.println(menu);
-            String selectedOption = scanner.nextLine();
-            switch (selectedOption) {
-                case "1":
-                    labelView.show();
-                    break;
-                case "2":
-                    postView.show();
-                    break;
-                case "3":
-                    writerView.show();
-                    break;
-                case "4":
-                    isExit = true;
-                    break;
-                default:
-                    System.out.println("Если вы не кот, то выберите пункт меню и введите цифру!");
-                    break;
-            }
-
+                String selectedOption = scanner.nextLine();
+                switch (selectedOption) {
+                    case "1":
+                        labelView.show();
+                        break;
+                    case "2":
+                        postView.show();
+                        break;
+                    case "3":
+                        writerView.show();
+                        break;
+                    case "4":
+                        isExit = true;
+                        break;
+                    default:
+                        System.out.println("Если вы не кот, то выберите пункт меню и введите цифру!");
+                        break;
+                }
         } while (!isExit);
         scanner.close();
-
     }
 }

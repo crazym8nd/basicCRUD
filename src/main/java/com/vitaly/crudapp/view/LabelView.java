@@ -27,7 +27,7 @@ public class LabelView {
     private final String deleteLabelMsg = "Delete Label.Enter ID:";
 
     public void createLabel() {
-        System.out.println("Enter name");
+        System.out.println(createLabelMsg);
         String name = scanner.nextLine();
         try{Label createdLabel = labelController.createLabel(name);
             System.out.println("Label created:" + createdLabel);

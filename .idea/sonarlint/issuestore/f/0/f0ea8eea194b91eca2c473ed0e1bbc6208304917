@@ -13,7 +13,7 @@ C
 java:S1170"!Make this final field static too.(âû÷Óúÿÿÿÿ8ÀÒŒ—¾1
 >
 java:S1170"!Make this final field static too.(“×á8ÀÒŒ—¾1
-G	java:S106"+Replace this use of System.out by a logger.(¾±”û8ÃÒŒ—¾1
+L	java:S106"+Replace this use of System.out by a logger.(Ü¤„Šıÿÿÿÿ8ÃÒŒ—¾1
 L	java:S106!"+Replace this use of System.out by a logger.(¯ˆÔ¿ûÿÿÿÿ8ÃÒŒ—¾1
 L	java:S106#"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8ÃÒŒ—¾1
 G	java:S106("+Replace this use of System.out by a logger.(ö—„Ò8ÄÒŒ—¾1
@@ -32,5 +32,3 @@ z
 java:S1128"XRemove this unused import 'com.vitaly.crudapp.repository.impls.GsonLabelRepositoryImpl'.(ö¬ßŸúÿÿÿÿ8á³—¾1
 T
 java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8á³—¾1
-T
-java:S1068"2Remove this unused "createLabelMsg" private field.(¹ªÊøÿÿÿÿ8ÆÒŒ—¾1

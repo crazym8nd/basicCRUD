@@ -1,6 +1,8 @@
 
 h
 java:S1192!"FDefine a constant instead of duplicating this literal "Error" 4 times.(êÓæøùÿÿÿÿ8ÜÎòè¾1
+b
+java:S2259H"EA "NullPointerException" could be thrown; "writers" is nullable here.(Æˆ¼—8»”‰é¾1
 >
 java:S1170"!Make this final field static too.(¯¾»Ÿ8æÎòè¾1
 >
