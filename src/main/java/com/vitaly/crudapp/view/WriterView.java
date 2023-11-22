@@ -24,24 +24,32 @@ public class WriterView {
     private final String deleteWriterMsg = "Delete writer.Enter ID:";
 
     public void createWriter() {
-        System.out.println("Enter first name    ");
+        System.out.println(createWriterMsg);
         String firstName = scanner.nextLine();
+        System.out.println("Enter last name:");
+        String lastName = scanner.nextLine();
         try{
-            Writer createdWriter = writerController.createWriter(firstName);
+            Writer createdWriter = writerController.createWriter(firstName, lastName);
             System.out.println("Writer created:" + createdWriter);
         } catch (Exception e){
-            System.out.println("Error");
+            System.out.println("ErrorWriter");
         }
     }
 
     public void editWriter(){
+        readWriters();
         System.out.println(editWriterMsg);
+
         try{
             Integer id = Integer.parseInt(scanner.nextLine());
             Writer writerToUpdate = writerController.getById(id);
             System.out.println("Enter new firstname:");
             String firstName = scanner.nextLine();
             writerToUpdate.setFirstName(firstName);
+            System.out.println("Enter new lastname:");
+            String lastName = scanner.nextLine();
+            writerToUpdate.setLastName(lastName);
+            writerToUpdate.setPostsIds(writerController.selectPosts());
             writerController.update(writerToUpdate);
             System.out.println("Changes saved");
         }catch (Exception e){
@@ -50,6 +58,7 @@ public class WriterView {
     }
 
     public void deleteWriter(){
+        readWriters();
         System.out.println(deleteWriterMsg);
         Integer id = scanner.nextInt();
         try{
@@ -71,7 +80,7 @@ public class WriterView {
         System.out.println(printWriterList);
         writers.sort(Comparator.comparing(Writer::getId));
         for (Writer w : writers){
-            System.out.println(w.getId() +" "+ w.getFirstName());
+            System.out.println(w.getId() +" "+ w.getFirstName() +" "+ w.getLastName() + " " + w.getPostsIds());
         }
     }
 
