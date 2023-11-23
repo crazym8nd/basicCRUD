@@ -1,2 +1,1 @@
-[{"id":0,"firstName":"Whatislove","lastName":"Babydonthurtme","postsIds":[3],"status":"ACTIVE"},
-  {"id":1,"firstName":"Vladislav","lastName":"Krutishkin","postsIds":[2],"status":"ACTIVE"}]
+[{"id":4,"firstName":"pisatel imya","lastName":"pistael familiya","writerPosts":[{"id":1,"title":"Zagolovok 1","content":"Kontent1","status":"ACTIVE","postLabels":[{"id":0,"name":"A","status":"ACTIVE"}]}],"status":"ACTIVE"}]

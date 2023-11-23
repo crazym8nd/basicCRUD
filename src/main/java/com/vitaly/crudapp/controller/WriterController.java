@@ -4,6 +4,7 @@ import com.vitaly.crudapp.model.pojo.Post;
 import com.vitaly.crudapp.model.pojo.Status;
 import com.vitaly.crudapp.model.pojo.Writer;
 import com.vitaly.crudapp.repository.WriterRepository;
+import com.vitaly.crudapp.repository.impls.GsonPostRepositoryImpl;
 import com.vitaly.crudapp.repository.impls.GsonWriterRepositoryImpl;
 import com.vitaly.crudapp.view.PostView;
 
@@ -21,7 +22,7 @@ public class WriterController {
         writerToCreate.setFirstName(firstName);
         writerToCreate.setLastName(lastName);
         writerToCreate.setStatus(Status.ACTIVE);
-        writerToCreate.setPostsIds(selectPosts());
+        writerToCreate.setWriterPosts(addPosts(selectPosts()));
         return writerRepository.save(writerToCreate);
     }
 
@@ -57,4 +58,13 @@ public class WriterController {
         }
         return postsIds;
     }
+    public List<Post> addPosts(List<Integer> postsIds){
+        List<Post> posts = new ArrayList<>();
+        for(Integer id : postsIds){
+            Post post = new GsonPostRepositoryImpl().getById(id);
+            posts.add(post);
+        }
+        return posts;
+    }
+
 }

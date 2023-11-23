@@ -7,7 +7,6 @@ public class Post {
     private String title;
     private String content;
     private Status status;
-    private List<Integer> labelsIds;
     private List<Label> postLabels;
 
     public Integer getId() {
@@ -47,18 +46,8 @@ public class Post {
     public void setPostLabels(List<Label> postLabels) {
         this.postLabels = postLabels;
     }
-
-    public List<Integer> getLabelsIds() {
-        return labelsIds;
-    }
-
-    public void setLabelsIds(List<Integer> labelsIds) {
-        this.labelsIds = labelsIds;
-    }
-
-
     public String toString() {
-        return "Post title=" + title + ",id=" + id;
+        return "Post id=" + id + "\n" + "Post title=" + title + "\n" + "Post content=" + content + "\n" + "Labels=" + postLabels;
     }
 
 }

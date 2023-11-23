@@ -20,7 +20,7 @@ public class PostController {
         postToCreate.setTitle(title);
         postToCreate.setContent(content);
         postToCreate.setStatus(Status.ACTIVE);
-        postToCreate.setLabelsIds(selectLabels());
+        postToCreate.setPostLabels(addLabels(selectLabels()));
         return postRepository.save(postToCreate);
     }
     public List<Post> getAll(){
@@ -56,6 +56,13 @@ public class PostController {
             }
         return labelsIds;
     }
-
+    public List<Label> addLabels(List<Integer> labelsIds){
+        List<Label> labels = new ArrayList<>();
+        for (Integer id : labelsIds) {
+            Label label = new GsonLabelRepositoryImpl().getById(id);
+            labels.add(label);
+        }
+        return labels;
+    }
 
 }

@@ -1,34 +1,28 @@
 
-h
-java:S1192#"FDefine a constant instead of duplicating this literal "Error" 4 times.(êÓæøùÿÿÿÿ8®ÒŒ—¾1
 f
 java:S2259J"DA "NullPointerException" could be thrown; "labels" is nullable here.(¹µÀúÿÿÿÿ8ÀÒŒ—¾1
 >
-java:S1170"!Make this final field static too.(°ö8ÀÒŒ—¾1
+java:S1170"!Make this final field static too.(°ö8ÀÒŒ—¾1
 >
-java:S1170"!Make this final field static too.(Åã½¹8ÀÒŒ—¾1
+java:S1170"!Make this final field static too.(Åã½¹8ÀÒŒ—¾1
 C
-java:S1170"!Make this final field static too.(¹ªÊøÿÿÿÿ8ÀÒŒ—¾1
+java:S1170"!Make this final field static too.(¹ªÊøÿÿÿÿ8ÀÒŒ—¾1
 C
-java:S1170"!Make this final field static too.(âû÷Óúÿÿÿÿ8ÀÒŒ—¾1
->
-java:S1170"!Make this final field static too.(“×á8ÀÒŒ—¾1
-L	java:S106"+Replace this use of System.out by a logger.(Ü¤„Šıÿÿÿÿ8ÃÒŒ—¾1
-L	java:S106!"+Replace this use of System.out by a logger.(¯ˆÔ¿ûÿÿÿÿ8ÃÒŒ—¾1
-L	java:S106#"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8ÃÒŒ—¾1
-G	java:S106("+Replace this use of System.out by a logger.(ö—„Ò8ÄÒŒ—¾1
-G	java:S106,"+Replace this use of System.out by a logger.(İ‚óÿ8ÄÒŒ—¾1
-L	java:S1060"+Replace this use of System.out by a logger.( ““‘ıÿÿÿÿ8ÄÒŒ—¾1
-L	java:S1062"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8ÄÒŒ—¾1
+java:S1170"!Make this final field static too.(öˆ§éûÿÿÿÿ8ÀÒŒ—¾1
+C
+java:S1170"!Make this final field static too.(êÍÆ—ÿÿÿÿÿ8ÀÒŒ—¾1
+L	java:S106"+Replace this use of System.out by a logger.(Ü¤„Šıÿÿÿÿ8ÃÒŒ—¾1
+L	java:S106"+Replace this use of System.out by a logger.(ÖôáÍüÿÿÿÿ8ÃÒŒ—¾1
+G	java:S106!"+Replace this use of System.out by a logger.(ó˜Ö³8ÃÒŒ—¾1
+G	java:S106'"+Replace this use of System.out by a logger.(ö—„Ò8ÄÒŒ—¾1
+G	java:S106+"+Replace this use of System.out by a logger.(î˜ğÈ8ÄÒŒ—¾1
+G	java:S106/"+Replace this use of System.out by a logger.(òÜ—à8ÄÒŒ—¾1
+G	java:S1061"+Replace this use of System.out by a logger.(Şğ†“8ÄÒŒ—¾1
 G	java:S1067"+Replace this use of System.out by a logger.(‚¾°8ÄÒŒ—¾1
-G	java:S106;"+Replace this use of System.out by a logger.(×¥¶8ÅÒŒ—¾1
-L	java:S106="+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8ÅÒŒ—¾1
-L	java:S106F"+Replace this use of System.out by a logger.(êÓæøùÿÿÿÿ8ÅÒŒ—¾1
+L	java:S106;"+Replace this use of System.out by a logger.(¤şï·úÿÿÿÿ8ÅÒŒ—¾1
+G	java:S106="+Replace this use of System.out by a logger.(ƒÎ…é8ÅÒŒ—¾1
+L	java:S106F"+Replace this use of System.out by a logger.(ÈÆÌªúÿÿÿÿ8ÅÒŒ—¾1
 G	java:S106I"+Replace this use of System.out by a logger.(å£8ÅÒŒ—¾1
 L	java:S106L"+Replace this use of System.out by a logger.(—âÜ÷úÿÿÿÿ8ÅÒŒ—¾1
 L	java:S106S"+Replace this use of System.out by a logger.(öóÌúÿÿÿÿ8ÆÒŒ—¾1
-L	java:S106f"+Replace this use of System.out by a logger.(´ñÄùÿÿÿÿÿ8ÆÒŒ—¾1
-z
-java:S1128"XRemove this unused import 'com.vitaly.crudapp.repository.impls.GsonLabelRepositoryImpl'.(ö¬ßŸúÿÿÿÿ8á³—¾1
-T
-java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓşÿÿÿÿ8á³—¾1
+G	java:S106f"+Replace this use of System.out by a logger.(”–”¶8ÆÒŒ—¾1

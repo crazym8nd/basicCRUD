@@ -1,7 +1,5 @@
 
 C
-java:S1170"!Make this final field static too.(öäÄ²øÿÿÿÿ8à¦¹¿1
-L	java:S106"+Replace this use of System.out by a logger.(©Ñÿ¶ùÿÿÿÿ8ã¦¹¿1
-G	java:S106)"+Replace this use of System.out by a logger.(ø¼²é8ä¦¹¿1
-]
-java:S1128"@Remove this unused import 'com.vitaly.crudapp.model.pojo.Label'.(©ñ¢8Ùà¹¹¿1
+java:S1170"!Make this final field static too.(öäÄ²øÿÿÿÿ8à¦¹¿1
+L	java:S106"+Replace this use of System.out by a logger.(©Ñÿ¶ùÿÿÿÿ8ä¦¹¿1
+G	java:S106'"+Replace this use of System.out by a logger.(ø¼²é8÷ÙËİ¿1

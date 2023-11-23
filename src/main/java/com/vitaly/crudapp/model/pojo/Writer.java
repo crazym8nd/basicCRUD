@@ -6,7 +6,6 @@ public class Writer {
     private Integer id;
     private String firstName;
     private String lastName;
-    private List<Integer> postsIds;
     private List<Post> writerPosts;
     private Status status;
 
@@ -36,7 +35,6 @@ public class Writer {
     }
 
 
-
     public Integer getId() {
         return id;
     }
@@ -44,12 +42,16 @@ public class Writer {
     public void setId(Integer id) {
         this.id = id;
     }
-    public List<Integer> getPostsIds() {
-        return postsIds;
+
+    public void setWriterPosts(List<Post> writerPosts){
+        this.writerPosts = writerPosts;
+    }
+    public List<Post> getWriterPosts(){
+        return writerPosts;
     }
 
-    public void setPostsIds(List<Integer> postsIds) {
-        this.postsIds = postsIds;
+    public String toString(){
+        return "Writer id=" + id + "\n" + "Writer first name=" + firstName + "\n" + "Writer last name=" + lastName + "\n" + "Posts=" + writerPosts;
     }
 
 

@@ -1,7 +1,5 @@
 package com.vitaly.crudapp.view;
 
-import com.vitaly.crudapp.model.pojo.Label;
-
 import java.util.Scanner;
 
 public class MainView {
@@ -12,10 +10,10 @@ public class MainView {
 
 
     private final String menu = "Выберете действие:\n" +
-            "1. Лейблы\n" +
-            "2. Посты\n" +
-            "3. Писатели\n" +
-            "4. Выход";
+            "1. Работа с лейблами\n" +
+            "2. Работа с постами\n" +
+            "3. Работа с писателями\n" +
+            "4. Выход из программы ";
 
 
     public void start() {

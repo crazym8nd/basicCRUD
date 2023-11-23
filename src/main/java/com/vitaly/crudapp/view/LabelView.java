@@ -2,9 +2,7 @@ package com.vitaly.crudapp.view;
 
 import com.vitaly.crudapp.controller.LabelController;
 import com.vitaly.crudapp.model.pojo.Label;
-import com.vitaly.crudapp.repository.impls.GsonLabelRepositoryImpl;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -16,49 +14,51 @@ public class LabelView {
     private final Scanner scanner = new Scanner(System.in);
 
     private final String menuLabel = "Выберете действие:\n" +
-            " 1. Создать\n" +
-            " 2. Редактировать\n" +
-            " 3. Удалить\n" +
+            " 1. Создать лейбл\n" +
+            " 2. Редактировать лейбл\n" +
+            " 3. Удалить лейбл\n" +
             " 4. Вывести список лейблов\n" +
-            " 5. Выход";
+            " 5. Выход в главное меню";
     private final String printLabelList = "Список лейблов:\n";
     private final String createLabelMsg = "Создание лейбла.\n" + "Введите название: ";
-    private final String editLabelMsg = "Edit label. Enter ID:";
-    private final String deleteLabelMsg = "Delete Label.Enter ID:";
+    private final String editLabelMsg = "Редактирование лейбла. Введите ID:";
+    private final String deleteLabelMsg = "Удаление лейбла.Введите ID:";
 
     public void createLabel() {
         System.out.println(createLabelMsg);
         String name = scanner.nextLine();
         try{Label createdLabel = labelController.createLabel(name);
-            System.out.println("Label created:" + createdLabel);
+            System.out.println("Лейбл создан:" + createdLabel);
         } catch (Exception e){
-            System.out.println("Error");
+            System.out.println("Ошибка при создании лейбла");
         }
     }
 
     public void editLabel(){
+        readLabels();
         System.out.println(editLabelMsg);
         try{
             Integer id = Integer.parseInt(scanner.nextLine());
             Label labelToUpdate = labelController.getById(id);
-            System.out.println("Enter new name:");
+            System.out.println("Введите новое имя:");
             String name = scanner.nextLine();
             labelToUpdate.setName(name);
             labelController.update(labelToUpdate);
-            System.out.println("Changes saved");
+            System.out.println("Изменения сохранены");
         }catch (Exception e){
-            System.out.println("Error");
+            System.out.println("Не получилось изменить лейбл");
         }
     }
 
     public void deleteLabel(){
+        readLabels();
         System.out.println(deleteLabelMsg);
         Integer id = scanner.nextInt();
         try{
             labelController.delete(id);
-            System.out.println("Label delted");
+            System.out.println("Лейбл удален");
         } catch (Exception e){
-            System.out.println("Error");
+            System.out.println("Ошибка при удалении лейбла");
         }
     }
 
@@ -67,7 +67,7 @@ public class LabelView {
         try{
             labels = labelController.getAll();
         } catch (Exception e){
-            System.out.println("Error");
+            System.out.println("Ошибка при получении списка лейблов");
         }
 
         System.out.println(printLabelList);
@@ -99,7 +99,7 @@ public class LabelView {
                     isExit = true;
                     break;
                 default:
-                    System.out.println("Choose Option!");
+                    System.out.println("Выберите пункт меню.");
                     break;
             }
         } while (!isExit);

@@ -33,6 +33,6 @@ public class Label {
 
 
     public String toString() {
-        return "Label name=" + name + ",id=" + id;
+        return id + " " + name;
     }
 }
