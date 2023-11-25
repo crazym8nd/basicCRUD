@@ -1,8 +1,11 @@
 package com.vitaly.crudapp.view;
 
 import com.vitaly.crudapp.controller.PostController;
+import com.vitaly.crudapp.model.pojo.Label;
 import com.vitaly.crudapp.model.pojo.Post;
+import com.vitaly.crudapp.repository.impls.GsonLabelRepositoryImpl;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -22,13 +25,42 @@ public class PostView {
     private final String editPostMsg = "Редактирование поста. Введите ID:";
     private final String deletePostMsg = "Удаление пост. Введите ID:";
 
+    private List<Integer> selectLabels(){
+
+        List<Integer> labelsIds = new ArrayList<>();
+        LabelView lv = new LabelView();
+        lv.readLabels();
+        boolean addLabels = true;
+        while (addLabels) {
+            System.out.println("Enter labels ID to add:");
+            Integer labelId = Integer.parseInt(scanner.nextLine());
+            labelsIds.add(labelId);
+
+            System.out.println("dobavit ewe kategoriy? (y/n)");
+            String answer = scanner.nextLine();
+            if (!answer.equalsIgnoreCase("y")) {
+                addLabels = false;
+            }
+        }
+        return labelsIds;
+    }
+    private List<Label> addLabels(List<Integer> labelsIds){
+        List<Label> labels = new ArrayList<>();
+        for (Integer id : labelsIds) {
+            Label label = new GsonLabelRepositoryImpl().getById(id);
+            labels.add(label);
+        }
+        return labels;
+    }
+
     public void createPost() {
         System.out.println(createPostMsg);
         String title = scanner.nextLine();
         System.out.println("Введите контент:");
         String content = scanner.nextLine();
+        List<Label> labels = addLabels(selectLabels());
         try {
-            Post createdPost = postController.createPost(title, content);
+            Post createdPost = postController.createPost(title, content, labels);
             System.out.println("Пост создан:\n" + createdPost);
         } catch (Exception e) {
             System.out.println("Ошибка при создании поста");
@@ -48,7 +80,7 @@ public class PostView {
             String content = scanner.nextLine();
             postToUpdate.setTitle(title);
             postToUpdate.setContent(content);
-            postToUpdate.setPostLabels(postController.addLabels(postController.selectLabels()));
+            postToUpdate.setPostLabels(addLabels(selectLabels()));
             postController.update(postToUpdate);
             System.out.println("Изменения сохранены");
         } catch (Exception e) {
@@ -111,4 +143,5 @@ public class PostView {
             }while (!isExit);
     }
 }
+
 

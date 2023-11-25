@@ -17,12 +17,12 @@ public class WriterController {
 
     private final WriterRepository writerRepository= new GsonWriterRepositoryImpl();
     private final Scanner scanner = new Scanner(System.in);
-    public Writer createWriter(String firstName, String lastName) {
+    public Writer createWriter(String firstName, String lastName, List<Post> posts) {
         Writer writerToCreate = new Writer();
         writerToCreate.setFirstName(firstName);
         writerToCreate.setLastName(lastName);
         writerToCreate.setStatus(Status.ACTIVE);
-        writerToCreate.setWriterPosts(addPosts(selectPosts()));
+        writerToCreate.setWriterPosts(posts);
         return writerRepository.save(writerToCreate);
     }
 
@@ -40,31 +40,6 @@ public class WriterController {
         writerRepository.deleteById(id);
     }
 
-    public List<Integer> selectPosts() {
-        List<Integer> postsIds = new ArrayList<>();
-        PostView pv = new PostView();
-        pv.readPosts();
-        boolean addPosts = true;
-        while (addPosts) {
-            System.out.println("Enter posts ID to add:");
-            Integer postId = Integer.parseInt(scanner.nextLine());
-            postsIds.add(postId);
 
-            System.out.println("add more posts? (y/n)");
-            String answer = scanner.nextLine();
-            if (!answer.equalsIgnoreCase("y")) {
-                addPosts = false;
-            }
-        }
-        return postsIds;
-    }
-    public List<Post> addPosts(List<Integer> postsIds){
-        List<Post> posts = new ArrayList<>();
-        for(Integer id : postsIds){
-            Post post = new GsonPostRepositoryImpl().getById(id);
-            posts.add(post);
-        }
-        return posts;
-    }
 
 }

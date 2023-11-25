@@ -2,8 +2,11 @@ package com.vitaly.crudapp.view;
 
 
 import com.vitaly.crudapp.controller.WriterController;
+import com.vitaly.crudapp.model.pojo.Post;
 import com.vitaly.crudapp.model.pojo.Writer;
+import com.vitaly.crudapp.repository.impls.GsonPostRepositoryImpl;
 
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
@@ -28,8 +31,9 @@ public class WriterView {
         String firstName = scanner.nextLine();
         System.out.println("Введите  фамилию:");
         String lastName = scanner.nextLine();
+        List<Post> posts = addPosts(selectPosts());
         try{
-            Writer createdWriter = writerController.createWriter(firstName, lastName);
+            Writer createdWriter = writerController.createWriter(firstName, lastName, posts);
             System.out.println("Писатель создан:" + createdWriter);
         } catch (Exception e){
             System.out.println("Ошибка при создании писателя");
@@ -49,7 +53,7 @@ public class WriterView {
             System.out.println("Введите фамилию:");
             String lastName = scanner.nextLine();
             writerToUpdate.setLastName(lastName);
-            writerToUpdate.setWriterPosts(writerController.addPosts(writerController.selectPosts()));
+            writerToUpdate.setWriterPosts(addPosts(selectPosts()));
             writerController.update(writerToUpdate);
             System.out.println("Изменения сохранены");
         }catch (Exception e){
@@ -111,8 +115,32 @@ public class WriterView {
             }
         } while (!isExit);
     }
+    public List<Integer> selectPosts() {
+        List<Integer> postsIds = new ArrayList<>();
+        PostView pv = new PostView();
+        pv.readPosts();
+        boolean addPosts = true;
+        while (addPosts) {
+            System.out.println("Enter posts ID to add:");
+            Integer postId = Integer.parseInt(scanner.nextLine());
+            postsIds.add(postId);
 
-
+            System.out.println("add more posts? (y/n)");
+            String answer = scanner.nextLine();
+            if (!answer.equalsIgnoreCase("y")) {
+                addPosts = false;
+            }
+        }
+        return postsIds;
+    }
+    public List<Post> addPosts(List<Integer> postsIds){
+        List<Post> posts = new ArrayList<>();
+        for(Integer id : postsIds){
+            Post post = new GsonPostRepositoryImpl().getById(id);
+            posts.add(post);
+        }
+        return posts;
+    }
 
 
 

@@ -1,3 +1,9 @@
 
-L	java:S106/"+Replace this use of System.out by a logger.(óÔ £øÿÿÿÿ8¾‡äİ¿1
-L	java:S1063"+Replace this use of System.out by a logger.(ü÷‚üÿÿÿÿ8¾‡äİ¿1
+z
+java:S1128"XRemove this unused import 'com.vitaly.crudapp.repository.impls.GsonLabelRepositoryImpl'.(ö¬ßŸúÿÿÿÿ8˜ş¯³À1
+[
+java:S1128	">Remove this unused import 'com.vitaly.crudapp.view.LabelView'.(øÔâĞ8˜ş¯³À1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8˜ş¯³À1
+M
+java:S1068"+Remove this unused "scanner" private field.(ËÙ…˜üÿÿÿÿ8™ş¯³À1

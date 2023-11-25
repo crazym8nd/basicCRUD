@@ -1,30 +1,32 @@
 
 b
-java:S2259Q"EA "NullPointerException" could be thrown; "writers" is nullable here.(Æˆ¼—8Éµìá¿1
+java:S2259U"EA "NullPointerException" could be thrown; "writers" is nullable here.(Æˆ¼—8«Å´³À1
 >
-java:S1170"!Make this final field static too.(¯¾»Ÿ8Êµìá¿1
+java:S1170"!Make this final field static too.(¯¾»Ÿ8¬Å´³À1
 >
-java:S1170"!Make this final field static too.(–ôÁ„8Êµìá¿1
+java:S1170"!Make this final field static too.(–ôÁ„8¬Å´³À1
 C
-java:S1170"!Make this final field static too.(‹ğ·İüÿÿÿÿ8Êµìá¿1
+java:S1170"!Make this final field static too.(‹ğ·İüÿÿÿÿ8¬Å´³À1
 C
-java:S1170"!Make this final field static too.(ªÀÖøÿÿÿÿ8Êµìá¿1
+java:S1170"!Make this final field static too.(ªÀÖøÿÿÿÿ8¬Å´³À1
 >
-java:S1170"!Make this final field static too.(’ÇÇ8Êµìá¿1
-F	java:S106"+Replace this use of System.out by a logger.(Û÷ô78Ìµìá¿1
-G	java:S106"+Replace this use of System.out by a logger.(Ê²¶8Ìµìá¿1
-G	java:S106!"+Replace this use of System.out by a logger.(è¾‰»8Ìµìá¿1
-G	java:S106#"+Replace this use of System.out by a logger.(Øâš8Ìµìá¿1
-L	java:S106)"+Replace this use of System.out by a logger.(µ¼°¨ÿÿÿÿÿ8Ìµìá¿1
-L	java:S106."+Replace this use of System.out by a logger.(ˆ·„¾øÿÿÿÿ8Íµìá¿1
-G	java:S1061"+Replace this use of System.out by a logger.(Ê²¶8Íµìá¿1
-G	java:S1066"+Replace this use of System.out by a logger.(òÜ—à8Íµìá¿1
-G	java:S1068"+Replace this use of System.out by a logger.(ò’…€8Íµìá¿1
-G	java:S106>"+Replace this use of System.out by a logger.(ı©§ğ8Íµìá¿1
-L	java:S106B"+Replace this use of System.out by a logger.(ê»Ããşÿÿÿÿ8Íµìá¿1
-G	java:S106D"+Replace this use of System.out by a logger.(ÿÖİë8Íµìá¿1
-L	java:S106M"+Replace this use of System.out by a logger.(·Œ–úÿÿÿÿ8Îµìá¿1
-L	java:S106P"+Replace this use of System.out by a logger.(£Š£™ùÿÿÿÿ8Îµìá¿1
-G	java:S106S"+Replace this use of System.out by a logger.(¡şşş8Îµìá¿1
-G	java:S106Z"+Replace this use of System.out by a logger.(¶”Ïú8Îµìá¿1
-G	java:S106m"+Replace this use of System.out by a logger.(ßø‡8Îµìá¿1
+java:S1170"!Make this final field static too.(’ÇÇ8¬Å´³À1
+F	java:S106"+Replace this use of System.out by a logger.(Û÷ô78¯Å´³À1
+G	java:S106 "+Replace this use of System.out by a logger.(Ê²¶8¯Å´³À1
+G	java:S106%"+Replace this use of System.out by a logger.(è¾‰»8°Å´³À1
+G	java:S106'"+Replace this use of System.out by a logger.(Øâš8°Å´³À1
+L	java:S106-"+Replace this use of System.out by a logger.(µ¼°¨ÿÿÿÿÿ8±Å´³À1
+L	java:S1062"+Replace this use of System.out by a logger.(ˆ·„¾øÿÿÿÿ8±Å´³À1
+G	java:S1065"+Replace this use of System.out by a logger.(Ê²¶8±Å´³À1
+G	java:S106:"+Replace this use of System.out by a logger.(òÜ—à8±Å´³À1
+G	java:S106<"+Replace this use of System.out by a logger.(ò’…€8±Å´³À1
+G	java:S106B"+Replace this use of System.out by a logger.(ı©§ğ8²Å´³À1
+L	java:S106F"+Replace this use of System.out by a logger.(ê»Ããşÿÿÿÿ8²Å´³À1
+G	java:S106H"+Replace this use of System.out by a logger.(ÿÖİë8²Å´³À1
+L	java:S106Q"+Replace this use of System.out by a logger.(·Œ–úÿÿÿÿ8²Å´³À1
+L	java:S106T"+Replace this use of System.out by a logger.(£Š£™ùÿÿÿÿ8²Å´³À1
+G	java:S106W"+Replace this use of System.out by a logger.(¡şşş8³Å´³À1
+G	java:S106^"+Replace this use of System.out by a logger.(¶”Ïú8³Å´³À1
+G	java:S106q"+Replace this use of System.out by a logger.(ßø‡8´Å´³À1
+L	java:S106|"+Replace this use of System.out by a logger.(¬ïùÅşÿÿÿÿ8µÅ´³À1
+H	java:S106€"+Replace this use of System.out by a logger.(û˜‹Ì8µÅ´³À1

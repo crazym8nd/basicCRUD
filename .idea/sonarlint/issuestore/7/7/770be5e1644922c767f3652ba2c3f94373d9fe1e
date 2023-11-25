@@ -1,3 +1,9 @@
 
-L	java:S1061"+Replace this use of System.out by a logger.(¬ïùÅşÿÿÿÿ8¶¹áá¿1
-G	java:S1065"+Replace this use of System.out by a logger.(û˜‹Ì8¶¹áá¿1
+t
+java:S1128"WRemove this unused import 'com.vitaly.crudapp.repository.impls.GsonPostRepositoryImpl'.(®·¯8û³³À1
+Z
+java:S1128	"=Remove this unused import 'com.vitaly.crudapp.view.PostView'.(Ç“¨8û³³À1
+M
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8û³³À1
+M
+java:S1068"+Remove this unused "scanner" private field.(ËÙ…˜üÿÿÿÿ8©Ö±³À1
